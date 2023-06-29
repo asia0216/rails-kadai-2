@@ -1,2 +1,28 @@
 <h3>登録施設</h3>
 
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>施設名</th>
+      <th>紹介文</th>
+      <th>料金</th>
+      <th>作成日</th>
+      <!--画像部分を忘れずに-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.image %></td>
+        <td><%= room.name %></td>
+        <td><%= room.detail %></td>
+        <td><%= room.money %></td>
+        <td><%= room.created_at %></td>
+        <td><%= link_to "編集", edit_room_path %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>

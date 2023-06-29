@@ -1,6 +1,6 @@
-<h3>施設登録</h3>
+<h3>施設の編集</h3>
 
-<%= form_with model: @room, url: new_room_path do |f| %>
+<%= form_with model: @room, url: edit_room_path do |f| %>
   <table>
     <tr>
       <th><%= f.label :name, "施設名" %></th>
@@ -24,7 +24,6 @@
     </tr>
   </table>
   <div><%= f.submit "登録する" %></div>
-  <%= f.hidden_field :user_id, value: @user.id %>
 <% end %>
 
-<div><%= link_to "topに戻る", root_path %></div>
+<%= link_to "戻る", :back %>

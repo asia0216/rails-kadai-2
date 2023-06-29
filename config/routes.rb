@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'rooms/show', to: 'rooms#show'
-  get 'rooms/new', to: 'rooms#new'
-  post 'rooms/new', to: 'rooms#create'
+  resources :rooms
 
   root 'users#home'
   get 'users/show_profile', to: 'users#show_profile'

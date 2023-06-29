@@ -1,6 +1,10 @@
 class RoomsController < ApplicationController
+  def index
+  end
+
   def new
     @room = Room.new
+    @user = current_user
   end
 
   def create
@@ -13,10 +17,22 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @rooms = @user.rooms
+  end
+
+  def edit
+    @room = Room.find(params[:id])
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
   def room_params
-    params.require(:room).permit(:name, :detail, :money, :addres, :image)
+    params.require(:room).permit(:name, :detail, :money, :addres, :image, :user_id)
   end
 end
