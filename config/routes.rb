@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/show'
   root 'users#home'
   get 'users/show_profile', to: 'users#show_profile'
   get 'users/show', to: 'users#show'
