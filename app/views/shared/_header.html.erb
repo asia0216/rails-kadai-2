@@ -6,9 +6,9 @@
       <%= current_user.name %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to"施設の新規登録", "#", class: "dropdown-itme" %><br>
+      <%= link_to"施設の新規登録", rooms_new_path, class: "dropdown-itme" %><br>
       <%= link_to"予約済み一覧", "#", class: "dropdown-itme" %><br>
-      <%= link_to"登録済み一覧", "#", class: "dropdown-itme" %><br>
+      <%= link_to"登録済み一覧", rooms_show_path, class: "dropdown-itme" %><br>
       <%= link_to"アカウント設定", users_show_profile_path, class: "dropdown-itme" %><br>
       <%= link_to"ログアウト",  destroy_user_session_path, class: "dropdown-itme", method: :delete %>
     </div>
