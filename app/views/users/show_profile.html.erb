@@ -1,0 +1,11 @@
+<h3>プロフィール詳細</h3>
+
+<span>メールアドレス</span>
+<p><%= @user.email %></p>
+
+<span>パスワード</span>
+<p>*********</p>
+
+<%= link_to "アカウント詳細", users_show_path %><br>
+
+<%= link_to "プロフィール変更", edit_user_registration_path %>

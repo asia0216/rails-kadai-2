@@ -1,0 +1,14 @@
+<h3>アカウント詳細</h3>
+
+<p>アイコン画像</p>
+
+<span>ユーザー名</span>
+<p><%= @user.name %></p>
+
+<span>自己紹介</span>
+<p><%= @user.introduce %></p>
+
+
+<%= link_to "プロフィール詳細", users_show_profile_path %><br>
+
+<%= link_to "プロフィール変更", users_edit_account_path %>
