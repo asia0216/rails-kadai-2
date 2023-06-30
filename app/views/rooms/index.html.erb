@@ -20,7 +20,8 @@
         <td><%= room.detail %></td>
         <td><%= room.money %></td>
         <td><%= room.created_at %></td>
-        <td><%= link_to "編集と削除", "#" %></td>
+        <td><%= link_to "編集", edit_room_path(id: room.id) %></td>
+        <td><%= link_to "削除", "#" %></td>
       </tr>
     <% end %>
   </tbody>
