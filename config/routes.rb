@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
   root 'users#home'
 
-  get 'rooms/index', to: 'rooms#index'
-  get 'rooms/new', to: 'rooms#new'
-  post 'rooms/new', to: 'rooms#create'
-  get 'rooms/show', to: 'rooms#show'
-  
-  resources :rooms, :only => :edit
+  resources :rooms
 
   get 'users/show_profile', to: 'users#show_profile'
   get 'users/show', to: 'users#show'

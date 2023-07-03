@@ -16,12 +16,12 @@
     <% @rooms.each do |room| %>
       <tr>
         <td><%= room.image %></td>
-        <td><%= link_to "#{room.name}", rooms_show_path(id: room.id) %></td>
+        <td><%= link_to "#{room.name}", room_path(id: room.id) %></td>
         <td><%= room.detail %></td>
         <td><%= room.money %></td>
         <td><%= room.created_at %></td>
         <td><%= link_to "編集", edit_room_path(id: room.id) %></td>
-        <td><%= link_to "削除", "#" %></td>
+        <td><%= link_to "削除", room_path(id: room.id), method: :delete, data: {confirm: "削除しますか？"} %></td>
       </tr>
     <% end %>
   </tbody>
